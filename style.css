@@ -1,0 +1,23 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    margin-bottom: 1em;
+    padding-left: 0.65em;
+}
+
+p {
+    margin-left: 2em;
+}
+
+.map-container {
+    margin-top: 3em;
+}
+
+#issMap{
+    height: 300px;
+    width: 950px;
+    margin: 0 auto;
+
+}
