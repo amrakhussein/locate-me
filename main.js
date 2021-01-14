@@ -25,23 +25,24 @@ async function getISS() {
     // console.log(data)
     const {latitude, longitude} = data;
     // console.log(longitude, latitude)
-    
-    
-    // add marker 
-    let marker = L.marker([0, 0]).addTo(issMap);
-    // console.log(marker)
-    // update marker location
-    marker.setLatLng([latitude, longitude])
-    // setting the veiw 
-    if (firstTimeView){ // preventing resetting the view when updating
-        issMap.setView([latitude, longitude], 3)
-        firstTimeView = false;
-    }
-    
+    addMarker(latitude, longitude)
+   
     document.querySelector('#lat').innerText = latitude.toFixed(2)
     document.querySelector('#lon').innerText = longitude.toFixed(2)
 }
-
+function addMarker(setLatitude, setLongitude) {
+    // add marker 
+      let marker = L.marker([0, 0]).addTo(issMap);
+      // console.log(marker)
+      // update marker location
+      marker.setLatLng([setLatitude, setLongitude])
+      // setting the veiw 
+      if (firstTimeView){ // preventing resetting the view & allow viewing the map normally 
+          issMap.setView([setLatitude, setLongitude], 3)
+          firstTimeView = false;
+      }
+      
+  }
 // automatically update the data every one second
 setInterval(getISS, 1000)
 
