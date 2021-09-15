@@ -5,4 +5,3 @@
 *It's a micro project on plotting a chosen location on a map as a part of CodingTrain [course](https://github.com/CodingTrain/Intro-to-Data-APIs-JS)*
 
 
-
